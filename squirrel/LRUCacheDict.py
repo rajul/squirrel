@@ -2,7 +2,7 @@ from squirrel.BaseCache import BaseCache
 
 class LRUCacheDict(BaseCache):
 	def __init__(self, capacity=100):
-		super(LRUCacheDict, self).__init__(capacity)
+		super(self.__class__, self).__init__(capacity)
 
 		self.cache = {}
 		self.lru = {}
